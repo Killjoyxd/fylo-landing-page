@@ -398,7 +398,7 @@ ul li {
   gap: 1.5rem;
   display: flex;
   flex-direction: row;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 .loc,
 .num-img,
