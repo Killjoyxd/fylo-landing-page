@@ -1,0 +1,563 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ## Colors */
+  /*  Navy 850 (intro and email sign up background):   */
+  --navy-850: hsl(217, 28%, 15%);
+  /* Navy 900 (main background):  */
+  --navy-900: hsl(218, 28%, 13%);
+  /* - Navy 950 (footer background):*/
+  --navy-950: hsl(216, 53%, 9%);
+  /* - Navy 800 (testimonials background): */
+  --navy-800: hsl(219, 30%, 18%);
+
+  /* ### Accent */
+  /* - Teal 200 (inside call-to-action gradient):  */
+  --teal-200: hsl(176, 68%, 64%);
+  /* - Cyan 500 (inside call-to-action gradient) */
+  --cyan-500: hsl(198, 60%, 50%);
+  /* - Red 500 (error) */
+  --red-500: hsl(0, 100%, 63%);
+
+  /* ### Neutral */
+  /* - White:  */
+  --white: hsl(0, 0%, 100%);
+
+  /* Body */
+  /* - Font size: 14px */
+  --font-size: 14px;
+
+  /* ### Headings, Call-to-actions, Header Navigation */
+
+  /* - Family: [Raleway](https://fonts.google.com/specimen/Raleway) */
+  --small-fw: 400;
+  --big-fw: 700;
+
+  /* ### Body */
+  --ff-heading: "Raleway", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+  --fs-body: 0.875rem;
+
+  /* - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans) */
+  /* - Weights: 400, 700 */
+
+  /* ## Icons */
+
+  /* For the social icons, you can use a font icon library. Some suggestions can be found below: */
+
+  /* - [Font Awesome](https://fontawesome.com/) */
+  /* - [IcoMoon](https://icomoon.io/) */
+  /* - [Ionicons](https://ionicons.com/) */
+}
+body {
+  font-family: var(--ff-body);
+  font-size: var(--font-size);
+  color: var(--white);
+  line-height: 1.6;
+  font-family: "Raleway", sans-serif;
+  font-weight: var(--small-fw);
+  background-color: var(--navy-800);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav-head-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.header {
+  background-color: var(--navy-800);
+  padding: 2.5rem 0;
+  margin: 0 clamp(1.5rem, 6vw, 5rem);
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: clamp(5rem, 10vw, 10rem);
+}
+.nav-head {
+  font-weight: var(--small-fw);
+}
+
+.nav-head a {
+  font-family: var(--ff-heading);
+  font-size: 0.875rem;
+  opacity: 0.8;
+  transition:
+    opacity 0.2s,
+    text-decoration 0.2s;
+}
+
+ul li {
+  display: inline;
+  margin-right: 2.5rem;
+}
+.nav-head a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.section1 {
+  display: flex;
+  flex-direction: column;
+  background-image: url(./images/bg-curvy-desktop.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  justify-content: center;
+  align-items: center;
+}
+.bg-img {
+  background-color: var(--navy-900);
+}
+.section1 img {
+  max-width: 100%;
+  height: auto;
+}
+.descri {
+  display: flex;
+  width: clamp(280px, 50%, 600px);
+  flex-direction: column;
+  font-size: var(--font-size);
+  align-items: center;
+  text-align: center;
+}
+.p1 {
+  width: 100%;
+  font-weight: var(--big-fw);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+}
+.p2 {
+  width: min(62%, 400px);
+  margin-bottom: 0.8rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.875rem clamp(2rem, 5vw, 3.75rem);
+  font-size: 1rem;
+  font-weight: var(--big-fw);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: var(--cyan-500);
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.btn:hover {
+  background-color: var(--teal-200);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+.section2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 6rem);
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto 7rem auto;
+  justify-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem 0;
+}
+.section3 {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  max-width: 1200px;
+  width: 90%;
+  margin: 4rem auto 5rem auto;
+  font-size: 1rem;
+}
+.m1 {
+  width: 100%;
+}
+.m2 {
+  font-size: var(--font-size);
+  font-weight: var(--small-fw);
+  margin-top: clamp(2rem, 6vw, 8rem);
+  padding: 1rem;
+}
+.stay {
+  line-height: 1.2;
+  max-width: 400px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: var(--big-fw);
+  margin-bottom: 1rem;
+}
+.stay1 {
+  margin-bottom: 1rem;
+}
+.stay2 {
+  margin-bottom: 1rem;
+}
+.fylo-img {
+  width: 18px;
+  height: 18px;
+}
+.fylo {
+  text-decoration: underline;
+  display: flex;
+  flex-direction: row;
+
+  color: var(--teal-200);
+}
+.section4 {
+  background-image: url(./images/bg-quotes.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  max-width: 1200px;
+
+  margin: 3rem auto 0 auto;
+  justify-items: center;
+  font-size: 1rem;
+  padding: 2rem 0 2rem 0.8rem;
+}
+.subsection {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  gap: 2rem;
+  font-size: 1rem;
+
+  border-radius: 0.5rem;
+}
+.b1,
+.b2,
+.b3 {
+  padding: 2.5rem 2rem 2rem;
+  background-color: var(--navy-800);
+  border: 1px solid var(--navy-850);
+  border-radius: 0.5rem;
+}
+.sub1,
+.sub2,
+.sub3 {
+  display: flex;
+  gap: 0.85rem;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+.subsection_text {
+  font-size: 0.825rem;
+  line-height: 1.9;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--teal-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  overflow: hidden;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.position {
+  font-size: 0.7rem;
+  opacity: 0.75;
+}
+.grad-color {
+  background: linear-gradient(
+    to top,
+    hsl(216, 53%, 9%) 50%,
+    hsl(218, 28%, 13%) 50%
+  );
+  position: relative;
+}
+.section5 {
+  background-color: var(--navy-800);
+  border-radius: 0.75rem;
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  text-align: center;
+  max-width: 860px;
+  width: 90%;
+  margin: 0 auto;
+}
+.early {
+  font-size: 1.5rem;
+  font-weight: var(--big-fw);
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  margin-bottom: 1.25rem;
+}
+.section5_decri {
+  max-width: 620px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.input_mail {
+  padding: 0.85rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 480px;
+  font-size: 0.9rem;
+}
+
+.btn_form {
+  padding: 0.85rem 2rem;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--cyan-500);
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: var(--big-fw);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn_form:hover {
+  background-color: var(--teal-200);
+}
+.color-footer {
+  background-color: var(--navy-950);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.footer {
+  justify-content: center;
+  font-size: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--navy-950);
+  padding: 0 clamp(1.5rem, 5vw, 5rem);
+}
+.f1 {
+  display: block;
+}
+.foot {
+  padding: 2rem 0;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  gap: clamp(2rem, 5vw, 8rem);
+  opacity: 0.85;
+}
+.location {
+  width: 35%;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
+}
+.loc,
+.num-img,
+.mail-img {
+  width: 18px;
+  height: 18px;
+}
+.loc-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
+.num,
+.mail {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1rem;
+}
+.num {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.foot-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+.nav-list {
+  gap: 0.875rem;
+}
+
+.nav-list a {
+  opacity: 0.85;
+  transition: color 0.2s;
+  font-size: 0.9rem;
+}
+
+.nav-list a:hover {
+  color: var(--teal-200);
+  opacity: 1;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+  padding-top: 0.25rem;
+}
+
+.social-link {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+  opacity: 0.85;
+}
+.social-link svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--white);
+  transition: fill 0.2s;
+}
+.social-link:hover {
+  border-color: var(--teal-200);
+  opacity: 1;
+}
+.social-link:hover svg {
+  fill: var(--teal-200);
+}
+
+@media (max-width: 768px) {
+  .head {
+    padding: 0;
+    margin: 0;
+  }
+  ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  .section1 {
+    background-image: url(./images/bg-curvy-mobile.svg);
+  }
+  .section1 img {
+    width: 100%;
+  }
+  .descri {
+    width: 90%;
+  }
+  .p2 {
+    width: 90%;
+  }
+
+  .section2 {
+    grid-template-columns: 1fr;
+    width: 85%;
+  }
+
+  .section3 {
+    flex-direction: column;
+    width: 85%;
+  }
+  .m1 img {
+    width: 100%;
+  }
+  .m2 {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .section4 {
+    width: 85%;
+  }
+  .subsection {
+    flex-direction: column;
+  }
+
+  .section5 {
+    width: 85%;
+  }
+  .form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input_mail {
+    width: 100%;
+  }
+  .btn_form {
+    width: 100%;
+  }
+  .color-footer {
+    background-color: var(--navy-950);
+    padding-top: 4rem;
+    padding-bottom: 0;
+  }
+
+  .foot {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .location {
+    width: 100%;
+  }
+  .foot-nav {
+    gap: 3rem;
+  }
+  .footer-socials {
+    justify-content: center;
+  }
+}
